@@ -1,0 +1,71 @@
+#title{
+    color: #2B2A35;
+    font-family: "Rubik";
+    font-size: 80px;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 1em;
+}
+
+#nested-title{
+    color: #4C6EF5;
+}
+
+#event-btn{
+    font-family: "Rubik";
+    font-size: 20px;
+    font-weight: 500;
+    height: 8vh;
+    width: 13vw;
+    border-radius: 7px;
+    text-decoration: none;
+    line-height: 1em;
+    fill: #2B2A35;
+    color: #2B2A35;
+    background-color: #FFC061;
+}
+
+#event-btn:hover{
+    background-color: #4C6EF5;
+    color: white;
+}
+
+.features{
+    width: 359px;
+    height: 436px;
+    padding: 56px 32px 30px 50px;
+    background-color: #EEF1FF;
+    border-radius: 19px 19px 19px 19px;
+}
+
+.feature-text{
+    font-family: "Nunito", Sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 2em;
+}
+
+#heading{
+    color: #FFFFFF;
+    font-family: "Rubik", Sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 1em;
+}
+
+
+#service-heading{
+    color: #2B2A35;
+    font-family: "Rubik", Sans-serif;
+    font-size: 43px;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 1.4em;
+}
+
+.service-list{
+    font-size: 20px;
+    line-height: 60px;
+}
