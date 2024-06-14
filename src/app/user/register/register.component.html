@@ -1,0 +1,21 @@
+<div class="container" style="height:100vh;">
+    <div class="row d-flex align-items-center h-100">
+        <div class="col-3">
+            <div class="newPasswordClass">
+                <h2>Signup Form</h2>
+               
+                <form (submit)="onSubmit()">
+                    <input type="text" placeholder="username" class="form-control" name="username"
+                    [(ngModel)]="username"/>
+                    <input type="text" placeholder="email" class="form-control" id="email" name="email" ngModel #emailInput="ngModel"
+                        [(ngModel)]="email">
+                    <input type="password" placeholder="Password" class="form-control" id="password" name="password" ngModel
+                        #passwordInput="ngModel" [(ngModel)]="password">
+    
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+               
+              </div>
+        </div>
+    </div>
+</div>

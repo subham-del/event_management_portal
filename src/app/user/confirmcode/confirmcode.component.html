@@ -1,0 +1,8 @@
+<form (submit)="onSubmit()" #signInForm="ngForm">
+    <input type="email" placeholder="email" id="email" name="email" ngModel #emailInput="ngModel"
+        [(ngModel)]="username">
+    <input type="text" placeholder="Code" id="password" name="password" ngModel
+        #passwordInput="ngModel" [(ngModel)]="confirmationCode">
+
+    <button type="submit">Register</button>
+</form>

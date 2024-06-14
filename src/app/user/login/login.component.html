@@ -1,0 +1,14 @@
+<div class="container" style="height:100vh;">
+    <div class="row d-flex align-items-center h-100">
+        <div class="col">
+            <form (submit)="onSignIn(signInForm)" #signInForm="ngForm">
+                <input type="email" placeholder="email" id="email" name="email" ngModel #emailInput="ngModel"
+                    [(ngModel)]="emailaddress">
+                <input type="password" placeholder="Password" id="password" name="password" ngModel
+                    #passwordInput="ngModel" [(ngModel)]="password">
+
+                <button type="submit">LOGIN</button>
+            </form>
+        </div>
+    </div>
+</div>
