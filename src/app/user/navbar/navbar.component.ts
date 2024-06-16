@@ -17,7 +17,12 @@ export class NavbarComponent {
     this.service.logOut()
   }
 
-  
+  handleEvent(){
+    this.router.navigate(['my-events'])
+  }
 
-  
+
+  handleNotification(){
+    this.router.navigate(['notification'])
+  } 
 }

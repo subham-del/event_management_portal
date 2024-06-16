@@ -1,0 +1,93 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row mt-5">
+        @for(event of eventDetails; track event.EventId){
+            @if(event.status == "pending"){
+                <div class="col-sm-4 my-3">
+                    <div class="card" style="border-radius: 10px;min-height:27vh">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">{{event.name}}</h5>
+                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="Waiting for the admin to approve" class="badge rounded-pill bg-warning text-dark d-flex align-items-center text-white" style="height: 20px; cursor:pointer"> <i class="bi bi-clock-history text-white"></i>&nbsp;pending</span>
+                               
+                            </div>
+                            <p class="card-text">{{event.description}} </p>
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <b style="font-size: 15px;">Start Date</b>
+                                    <p class="form-text">{{event.startDate}}</p>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <b>End Date</b>
+                                    <p class="form-text">{{event.endDate}}</p>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <b>Participants</b>
+                                    <p class="form-text">{{event.participants}}</p>
+                                </div>
+                            </div>
+                            <div class="d-flex" style="gap: 5%;">
+                                <div class="rounded-circle bg-primary d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="top" title="edit" style="width: 30px;height:30px">
+                                    <i class="bi bi-pencil  text-white" ></i>
+                                </div>
+                                <div class="rounded-circle bg-danger d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="top" title="cancel event" style="width: 30px;height:30px">
+                                    <i class="bi bi-x text-white" style="font-size: 25px;"></i>
+                                </div>
+                               
+                            </div>
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+            }
+            
+        }
+    </div>
+    <div class="row">
+        
+        <h5>Upcoming Events</h5>
+        @for(event of eventDetails; track event.EventId){
+            @if(event.status == "Approved"){
+                <div class="col-sm-4 my-3">
+                    <div class="card" style="border-radius: 10px;min-height:27vh">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">{{event.name}}</h5>
+                                <span data-bs-toggle="tooltip" data-bs-placement="top" title="admin verified" class="badge rounded-pill bg-success text-dark d-flex align-items-center text-white" style="height: 20px; cursor:pointer"> <i class="bi bi-clock-history text-white"></i>&nbsp;Approved</span>
+                               
+                            </div>
+                            <p class="card-text">{{event.description}} </p>
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <b style="font-size: 15px;">Start Date</b>
+                                    <p class="form-text">{{event.startDate}}</p>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <b>End Date</b>
+                                    <p class="form-text">{{event.endDate}}</p>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <b>Participants</b>
+                                    <p class="form-text">{{event.participants}}</p>
+                                </div>
+                            </div>
+                            <div class="d-flex" style="gap: 5%;">
+                                <div class="rounded-circle bg-primary d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="top" title="edit" style="width: 30px;height:30px">
+                                    <i class="bi bi-pencil  text-white" ></i>
+                                </div>
+                                <div class="rounded-circle bg-danger d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="top" title="cancel event" style="width: 30px;height:30px">
+                                    <i class="bi bi-x text-white" style="font-size: 25px;"></i>
+                                </div>
+                               
+                            </div>
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+            }
+            
+        }
+    </div>
+</div>

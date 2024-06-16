@@ -10,7 +10,9 @@ import { Router } from '@angular/router';
 export class LandingPageComponent {
   constructor(private service:AuthService, private router:Router){}
 
-  
+  handleClick(){
+    this.router.navigate(['eventRegistration'])
+  }
 
   signOut(){
     this.service.logOut();

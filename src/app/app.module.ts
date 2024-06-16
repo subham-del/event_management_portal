@@ -9,6 +9,13 @@ import { LoginComponent } from './user/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './user/register/register.component';
 import { ConfirmcodeComponent } from './user/confirmcode/confirmcode.component';
+import { EventpageComponent } from './user/eventpage/eventpage.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MyeventComponent } from './user/myevent/myevent.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
+import { PendingEventRequestComponent } from './admin/pending-event-request/pending-event-request.component';
+import { UsernotificationComponent } from './user/usernotification/usernotification.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +24,18 @@ import { ConfirmcodeComponent } from './user/confirmcode/confirmcode.component';
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    ConfirmcodeComponent
+    ConfirmcodeComponent,
+    EventpageComponent,
+    MyeventComponent,
+    DashboardComponent,
+    AdminloginComponent,
+    PendingEventRequestComponent,
+    UsernotificationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-   
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule
   ],

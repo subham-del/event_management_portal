@@ -1,23 +1,6 @@
-<!-- <div class="container" style="height:100vh;">
-    <div class="row d-flex align-items-center justify-content-center h-100">
-        <div class="col-4">
-            <h3 style="font-family: 'Rubik';">Login</h3>
-            <form (submit)="onSignIn(signInForm)" #signInForm="ngForm">
-                <input type="email" class="form-control mb-3" placeholder="email" id="email" name="email" ngModel #emailInput="ngModel"
-                    [(ngModel)]="emailaddress">
-                <input type="password" class="form-control mb-3" placeholder="Password" id="password" name="password" ngModel
-                    #passwordInput="ngModel" [(ngModel)]="password">
-
-                <button type="submit" class="btn btn-primary">Sign In</button>
-            </form>
-        </div>
-    </div>
-</div> -->
-
-
 <div class="container" style="height:100vh;">
     <div class="row d-flex align-items-center justify-content-center h-100">
-        <div id="signin" class="col-4 py-5" style="height: 55vh;">
+        <div id="signin" class="col-4 py-5" style="height: 50vh;">
             <div class="row">
                 <div class="col">
                     <h5 class="text-center" style="font-family: 'Rubik';">Sign in</h5>
@@ -44,13 +27,7 @@
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary form-control">Sign in</button>
-                        <div class="row mt-4">
-                            <div class="col d-flex flex-column justify-content-around align-items-center" style="line-height:10px;">
-                                <p class="text-center">login as <span class="text-primary" style="cursor: pointer;" (click)="handleClick()">admin</span></p>
-                              
-                               
-                            </div>
-                        </div>
+                        
                     </form>
                 </div>
             </div>

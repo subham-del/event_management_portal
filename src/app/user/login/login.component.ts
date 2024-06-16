@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../auth.service';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 
@@ -12,7 +13,7 @@ import { NgForm } from '@angular/forms';
 export class LoginComponent {
   emailaddress: string = '';
   password: string = '';
-  constructor(private authservice: AuthService) {
+  constructor(private authservice: AuthService, private router:Router) {
   }
 
   onSignIn(form: NgForm) {
@@ -20,6 +21,10 @@ export class LoginComponent {
       this.authservice.login(this.emailaddress, this.password)
  
     }
+  }
+
+  handleClick(){
+    this.router.navigate(['admin'])
   }
   
 }

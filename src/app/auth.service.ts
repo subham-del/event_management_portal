@@ -21,8 +21,8 @@ export class AuthService {
   username: string = "";
   constructor(private router: Router) {
     this.userPool = new CognitoUserPool( {
-      UserPoolId: "ap-south-1_l6Mg1cgG8",
-      ClientId: "rv06odfjduhcti7au46hpsnsh",
+      UserPoolId: "ap-south-1_0zHLqi7FM",
+      ClientId: "3v5t11imgrtctbpk2i910tdcb2",
     });
    }
 
@@ -42,8 +42,8 @@ export class AuthService {
     });
 
     let poolData = {
-      UserPoolId: "ap-south-1_l6Mg1cgG8",
-      ClientId: "rv06odfjduhcti7au46hpsnsh",
+      UserPoolId: "ap-south-1_0zHLqi7FM",
+      ClientId: "3v5t11imgrtctbpk2i910tdcb2",
     };
 
     this.username = emailaddress;
@@ -54,7 +54,8 @@ export class AuthService {
     this.cognitoUser.authenticateUser(authenticationDetails, {
       onSuccess: (result: any) => {
         this.router.navigate(['home']);
-        console.log("Success Results : ", result);
+        console.log("Success Results : ", result.idToken.payload.name,result.idToken.payload.email);
+        
       },
       // First time login attempt
       newPasswordRequired: () => {
@@ -95,8 +96,8 @@ export class AuthService {
 
   logOut() {
     let poolData = {
-      UserPoolId: "ap-south-1_l6Mg1cgG8",
-      ClientId: "rv06odfjduhcti7au46hpsnsh",
+      UserPoolId: "ap-south-1_0zHLqi7FM",
+      ClientId: "3v5t11imgrtctbpk2i910tdcb2",
     };
     this.userPool = new CognitoUserPool(poolData);
     this.cognitoUser = this.userPool.getCurrentUser();
@@ -111,21 +112,16 @@ export class AuthService {
   signUp(username: string, password: string, email: string): Promise<any> {
     const attributeList = [
       new CognitoUserAttribute({
-        Name: 'email',
-        Value: email
-      }),
-      new CognitoUserAttribute({
         Name: 'name',
         Value: username
       }),
-
-     
+      
       
       
     ];
 
     return new Promise((resolve, reject) => {
-      this.userPool.signUp(username, password, attributeList, null, (err:any, result:any) => {
+      this.userPool.signUp(email, password, attributeList, null, (err:any, result:any) => {
         if (err) {
           reject(err);
           return;
